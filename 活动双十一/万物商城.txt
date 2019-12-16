@@ -1,0 +1,147 @@
+﻿
+搜索记录
+create table record(
+    `text` varchar(50) not null
+);
+
+登陆注册
+create table register(
+    `username` varchar(50) not null , 
+    `password` varchar(50) not null 
+     
+);
+
+用户
+create table user(
+    `username` varchar(50) not null
+);
+
+
+商品
+create table details(
+       	 `id` int(20) primary key auto_increment ,
+   	 `title` varchar(200) not null , 
+   	 `price` float(10,2) not null , 
+    	 `primary` float(10,2) not null ,
+    	 `src` varchar(80) not null , 
+     	 `volume` varchar(20) not null,  
+         `discount` varchar(20) not null , 
+         `shop` varchar(50) not null
+);
+
+
+商品id ， 商品标题 ，商品价格 ，商品原价 , 商品图片 , 商品销量 ，商品折扣 , 商品店铺名
+
+
+insert details (`title` , `price` , `primary` , `src` ,  `volume` ,  `discount` , `shop`)
+values
+("森马官网秋季加绒牛仔裤男潮牌2019冬季直筒宽松牛仔裤潮流休闲裤" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/male/male_one.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马男装专卖店"),
+("森马男卫衣宽松连帽衫男士黑色长袖加绒套头上衣2019新款外套套头" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/male/male_two.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马男装专卖店"),
+("森马秋季牛仔裤男潮牌2019新款男士哈伦宽松小锥冬季黑色牛仔裤男" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/male/male_three.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马男装专卖店"),
+("森马圆领毛衣男宽松外穿冬季2019新款套头外套男韩版潮流含羊毛衫" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/male/male_four.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马男装专卖店"),
+("森马羽绒服男短款年轻冬新款宽松冬装外套男士学生加厚面包服情侣" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/male/male_five.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马男装专卖店"),
+("森马秋季牛仔裤男潮牌修身小脚2019冬男士潮流磨毛加厚黑色牛仔裤" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/male/male_six.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马男装专卖店"),
+("森马工装裤男士秋冬休闲裤小脚裤子男运动慢跑长裤港风厚款男裤潮" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/male/male_seven.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马男装专卖店"),
+("森马毛衫男半高领加厚针织衫男士秋冬装条纹圆领线衣2019新款韩版" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/male/male_eight.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马男装专卖店"),
+("森马卫衣男连帽秋冬装加绒外套情侣款2019外套宽松boy黑色上衣潮" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/male/male_nine.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马男装专卖店"),
+("森马轻薄羽绒服男短款2019年冬季外套新款男士薄款潮流冬装男装衣" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/male/male_ten.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马男装专卖店"),
+("森马休闲裤男2019新款冬季潮流小脚男士裤子运动加绒加厚秋冬男裤" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/male/male_eleven.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马男装专卖店"),
+("森马休闲裤男2019冬季新款长裤宽松男士运动束脚裤子加绒保暖男裤" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/male/male_twelve.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马男装专卖店"),
+("森马棉服男2019冬季新款宽松短款工装棉衣男装面包服韩版棉袄潮牌" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/male/male_thirteen.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马男装专卖店"),
+("森马棉服男装2019冬季新款中长款毛领连帽派克服保暖棉衣加厚外套" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/male/male_fourteen.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马男装专卖店"),
+("森马加绒牛仔外套男夹克冬季时尚加厚男装韩版学生牛仔衣仿羊羔毛" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/male/male_fifteen.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马男装专卖店"),
+("森马工装外套男飞行员夹克2019新款男ins潮立领棒球服户外防泼水" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/male/male_sixteen.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马男装专卖店"),
+("森马新款外套男韩版潮流飞行员夹克棒球服休闲帅气ins双面穿茄克" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/male/male_seventeen.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马男装专卖店"),
+("森马2019冬季新款棉服男工装款加厚宽松撞色拼接连帽字母刺绣棉衣" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/male/male_eighteen.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马男装专卖店"),
+("森马冬装2019新款潮工装棉服女韩版宽松bf中长款加厚棉衣毛领外套" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/female/female_one.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马女装专卖店"),
+("森马牛仔裤女秋冬显瘦裤子冬季2019新款修身小脚长裤少女紧身裤潮" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/female/female_two.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马女装专卖店"),
+("森马羽绒服女中长款2019冬新款工装女连帽插肩袖保暖少女冬装外套" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/female/female_three.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马女装专卖店"),
+("森马卫衣女2019新款加绒外套春秋加厚上衣连帽套头纯色ins潮短款" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/female/female_four.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马女装专卖店"),
+("森马毛衣女2019秋冬新款宽松外穿套头慵懒风灯笼袖针织毛衣厚网红" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/female/female_five.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马女装专卖店"),
+("森马撞色拼接毛衫女2019冬新款半高领宽松外穿加厚套头毛衣马海毛" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/female/female_six.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马女装专卖店"),
+("森马牛仔裤女直筒宽松萝卜裤显保暖毛毛裤韩版冬季加绒小锥裤子潮" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/female/female_seven.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马女装专卖店"),
+("森马棉服女冬装2019新款潮韩版连帽学生外套小棉袄女短款休闲保暖" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/female/female_nine.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马女装专卖店"),
+("森马羽绒服女2019时尚冬季新款轻薄羽绒服女短款修身立领外套鸭绒" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/female/female_ten.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马女装专卖店"),
+("森马轻薄羽绒服中长款年轻时尚时尚羽绒过膝显瘦女装冬季连帽外套" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/female/female_eleven.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马女装专卖店"),
+("森马双11女装爆款推荐羽绒服女2019冬季新款宽松少女外套防风ins" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/female/female_twelve.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马女装专卖店"),
+("森马加绒加厚卫衣女2019冬新款黑色潮ins长袖女士连帽宽松假两件" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/female/female_thirteen.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马女装专卖店"),
+("森马毛衣女宽松慵懒2019秋冬新款加厚针织衫粗线套头毛衫短款百搭" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/female/female_fourteen.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马女装专卖店"),
+("森马毛衣女秋冬2019新款荷叶边打底衫毛衫小针织修身保暖内搭黑色" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/female/female_fifteen.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马女装专卖店"),
+("森马修身显瘦牛仔裤女加绒紧身裤2019新款秋冬小脚裤子韩版九分裤" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/female/female_sixteen.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马女装专卖店"),
+("森马加绒加厚休闲裤女冬束脚毛线奶奶裤情侣工装裤黑色宽松运动裤" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/female/female_seventeen.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马女装专卖店"),
+("森马外套女2019新款秋季短款灯芯绒上衣仿羊羔绒韩版宽松时尚夹克" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/female/female_eighteen.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马女装专卖店"),
+("森马冬装2019新款潮工装棉服女韩版宽松bf中长款加厚棉衣毛领外套" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/female/female_nineteen.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马女装专卖店"),
+("森马棉服女2019冬季新款韩版宽松棉衣oversize面包服棉袄连帽外套" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/female/female_twenty.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马女装专卖店"),
+("森马羽绒服女中长款2019冬新款工装女连帽插肩袖保暖少女冬装外套" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/female/female_twenty-one.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马女装专卖店"),
+("森马2019冬季新款羽绒服女中长款时尚大毛领韩版女装宽松加厚外套" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/female/female_thirty-two.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马女装专卖店"),
+("森马2019冬季新款毛呢外套女中长款oversize复古翻领牛角扣呢大衣" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/female/female_twenty-three.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马女装专卖店"),
+("森马棉服冬装2019新款冬季外套女潮ins港风短款韩版宽松工装棉袄" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/female/female_twenty-four.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马女装专卖店"),
+("森马女棉服年轻冬季新款立领飞行员夹克女装字母刺绣韩版潮流外套" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/female/female_twenty-five.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马女装专卖店"),
+("森马卫衣女2019新款加绒外套春秋加厚上衣连帽套头纯色ins潮短款" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/female/female_twenty-six.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马女装专卖店"),
+("森马加绒cec卫衣女圆领宽松刺绣冬季2019新款ins外套女bf慵懒风潮" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/female/female_twenty-seven.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马女装专卖店"),
+("森马卫衣女宽松连帽2019新款秋冬连帽宽松紫色bf慵懒风上衣潮原宿" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/female/female_twenty-eight.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马女装专卖店"),
+("森马卫衣女2019秋冬新款宽松韩版waitmore慵懒风百搭薄款连帽刺绣" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/female/female_twenty-nine.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马女装专卖店"),
+("森马卫衣女宽松秋冬薄款连帽宽松慵懒风纯色女士百搭情侣雾霾蓝潮" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/female/female_twelve.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马女装专卖店"),
+("森马女士毛衣秋冬外穿2019新款时尚白毛衫套头慵懒风加厚内搭高领" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/female/female_thirty-one.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马女装专卖店"),
+("森马毛衣女秋冬2019新款荷叶边打底衫毛衫小针织修身保暖内搭黑色" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/female/female_thirty-two.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马女装专卖店"),
+("森马网红毛衣女2019秋冬新款日系慵懒风针织衫黑色毛衫暖宽松外穿" , ROUND((RAND()+1)*100) , ROUND((RAND()+1)*1000) ,"../static/female/female_thirty.webp"  , ROUND(RAND()*10000) ,  TRUNCATE(RAND()*10+RAND() , 1) , "森马女装专卖店");
+
+
+购物车
+create table crat(
+       	   `id` int(20) primary key auto_increment ,
+           `user` varchar(80) not null , 
+           `shop` varchar(50) not null default "森马", 
+           `src` varchar(80) not null ,   
+           `title` varchar(200) not null , 
+           `detailed` varchar(80) not null ,   
+           `price` float(10,2) not null , 
+           `number` int  not null  default 1 ,
+           `check` varchar(20) not null  default 'true' 
+);
+
+insert crat (`user` , `src` , `title` , `detailed` , `price`)
+values 
+("1234579" , "../aaa" , "this" , "28" , "199.00");
+
+
+地址
+create table addr(
+       	   `id` int(20) primary key auto_increment ,
+           `name` varchar(80) not null , 
+           `tel` varchar(50) not null, 
+           `address` varchar(200) not null ,   
+           `code` int(20) not null ,   
+           `addrbool` varchar(20) not null default 'false' , 
+           `user` varchar(80) not null , 
+           `addressDetail` varchar(80) not null , 
+           `areaCode` varchar(80) not null , 
+           `city` varchar(80) not null , 
+           `county` varchar(80) not null , 
+           `postalCode` varchar(80) not null , 
+           `province` varchar(80) not null ,
+           `isDefault` varchar(80) not null
+
+);
+
+insert addr (`name` , `tel` , `address` , `code` , `addrbool` , `user` , `addressDetail` , `areaCode` , `city` , `county` , `postalCode` , `province` , `isDefault`)
+values 
+("xiaozhong" , "13824823170" , "广东省广州市黄埔区吉山街道" , "582135" , "true" , "13824823170" , "街上借" , "150205" , "包头市" , "石拐区" , "123465" , "内蒙古自治区" , true);
+
+
+
+  
+
+ 
+   
+  
+
+
+
+
+
+
+
+
+
+
