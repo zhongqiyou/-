@@ -8,15 +8,13 @@
 <script>
 // import NavFooter from "./components/NavFooter.vue"
 
-
 export default {
-  name: 'app',
+  name: "app",
   components: {
     // NavFooter
   }
-}
+};
 </script>
 
 <style>
-
 </style>
